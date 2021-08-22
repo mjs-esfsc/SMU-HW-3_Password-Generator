@@ -1,10 +1,18 @@
 
 // Assignment Code
+console.log("well shit");
+var container = document.querySelector(".container");
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword(){
+function generatePassword() {
+
+  var uppercaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var lowercaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  var numArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  var charArray = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
+  
   // WHEN prompted for the length of the password
-  var length = prompt("Enter password length")
+  var passLength = prompt("Enter password length from 8 to 128 characters")
   // THEN I choose a length of at least 8 characters and no more than 128 characters
   console.log(parseInt(length))
   console.log(typeof parseInt(length))
@@ -14,7 +22,7 @@ function generatePassword(){
   // THEN my input should be validated and at least one character type should be selected
   // WHEN all prompts are answered
   // THEN a password is generated that matches the selected criteria
-  
+  console.log("test");
   return "test"
 }
 
@@ -25,8 +33,11 @@ function writePassword() {
   // THEN the password is either displayed in an alert or written to the page
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-
+  console.log(password);
 }
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+generatePassword();
