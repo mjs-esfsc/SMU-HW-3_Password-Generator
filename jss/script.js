@@ -1,6 +1,11 @@
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var uppercaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var lowercaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",  "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var numberChar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var specialChar = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
+
 
 function generatePassword(){
   // WHEN prompted for the length of the password
@@ -25,6 +30,7 @@ function writePassword() {
   // THEN the password is either displayed in an alert or written to the page
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
+  alert(password);
 
 }
 
