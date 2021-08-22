@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password Generator</title>
 </head>
 <body>
     <script>src="./js/script.js"</script>
     <div>
         <button id="generate">Generate Password</button>
     </div>
-    <div id="password">
-        <h1>Password: <span id="">test</span></h1>
-    </div>
+    <div>
+        <textarea
+          readonly
+          id="password"
+          placeholder="Your Secure Password"
+          aria-label="Generated Password"
+        ></textarea>
+      </div>
+
 </body>
 </html>
