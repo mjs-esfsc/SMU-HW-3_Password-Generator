@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Password Generator</title>
 </head>
+
 <body>
-    <script>src="./js/script.js"</script>
+    <header>
+        <h1>Password Generator</h1>
+    </header>
+    <script>src = "./js/script.js"</script>
     <div>
         <button id="generate">Generate Password</button>
     </div>
-    <div>
-        <textarea
-          readonly
-          id="password"
-          placeholder="Your Secure Password"
-          aria-label="Generated Password"
-        ></textarea>
-      </div>
+    <div class="showPassword">
+        <h3>
+            <span id="password">Password</span>
+        </h3>
+    </div>
 
 </body>
+
 </html>
