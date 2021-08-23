@@ -16,32 +16,62 @@ function generatePassword() {
 
   var passLength = prompt("Enter password length from 8 to 128 characters");
   // THEN I choose a length of at least 8 characters and no more than 128 characters
-            // getLength()
-            // test1 = (parseInt(passLength));
-            // test2 = (typeof parseInt(passLength))
-            // if  (test2!==Number){
-            //   alert("INTEGER ONLY PLEASE!")
-            //   getLength()
-            // }
+  // getLength()
+  // test1 = (parseInt(passLength));
+  // test2 = (typeof parseInt(passLength))
+  // if  (test2!==Number){
+  //   alert("INTEGER ONLY PLEASE!")
+  //   getLength()
+  // }
 
-            // function getLength() {
-            //   var passLength = prompt("Enter password length from 8 to 128 characters")
-            //   return passLength
-            // }
+  // function getLength() {
+  //   var passLength = prompt("Enter password length from 8 to 128 characters")
+  //   return passLength
+  // }
 
 
   // WHEN asked for character types to include in the password
-  var passCase = prompt("Use upper and lower case letters?");
-  var passNums = prompt("Use numbers?");
-  var passSpec = prompt("Use special characters?");
+  var passCase = prompt("Use upper and lower case letters? y or n");
+  var passNums = prompt("Use numbers? y or n");
+  var passSpec = prompt("Use special characters? y or n");
   // THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
   // WHEN I answer each prompt
   // THEN my input should be validated and at least one character type should be selected
   //TODO Add Validation logic.
+  //Testing array selector logic
+  if (passCase === "y") {
+    useArrays++
+  }
+  if (passNums === "y") {
+    useArrays++
+  }
+  if (passSpec === "y") {
+    useArrays++
+  }
+  console.log(passCase);
+  console.log(passNums);
+  console.log(passSpec);
+  console.log(useArrays);
+  var arrayUsed = "";
+  console.log("use array " + arrayUsed);
   // WHEN all prompts are answered
   // THEN a password is generated that matches the selected criteria
-  for (var i=0;i<passLength;i++){
-  passResult.push (uppercaseArray[Math.floor(Math.random()*uppercaseArray.length)]); 
+  for (var i = 0; i < passLength; i++) {
+    arrayUsed = ([Math.floor(Math.random() * useArrays)]);
+    console.log((typeof parseInt(arrayUsed)));
+    console.log(arrayUsed);
+    if (arrayUsed == 0) {
+      passResult.push(uppercaseArray[Math.floor(Math.random() * uppercaseArray.length)]);
+    }
+    if (arrayUsed == 1) {
+      passResult.push(lowercaseArray[Math.floor(Math.random() * lowercaseArray.length)]);
+    }
+    if (arrayUsed == 2) {
+      passResult.push(uppercaseArray[Math.floor(Math.random() * numArray.length)]);
+    }
+    if (arrayUsed == 3) {
+      passResult.push(uppercaseArray[Math.floor(Math.random() * charArray.length)]);
+    }
   }
   return passResult.join("");
 }
