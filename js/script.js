@@ -53,24 +53,28 @@ function generatePassword() {
   console.log(passSpec);
   console.log(useArrays);
   var arrayUsed = "";
-  console.log("use array " + arrayUsed);
+  //console.log("use array " + arrayUsed);
   // WHEN all prompts are answered
   // THEN a password is generated that matches the selected criteria
   for (var i = 0; i < passLength; i++) {
     arrayUsed = ([Math.floor(Math.random() * useArrays)]);
-    console.log((typeof parseInt(arrayUsed)));
-    console.log(arrayUsed);
+    //console.log((typeof parseInt(arrayUsed)));
+    //console.log(arrayUsed);
     if (arrayUsed == 0) {
       passResult.push(uppercaseArray[Math.floor(Math.random() * uppercaseArray.length)]);
+      console.log('upper');
     }
     if (arrayUsed == 1) {
       passResult.push(lowercaseArray[Math.floor(Math.random() * lowercaseArray.length)]);
+      console.log('lower');
     }
     if (arrayUsed == 2) {
-      passResult.push(uppercaseArray[Math.floor(Math.random() * numArray.length)]);
+      passResult.push(numArray[Math.floor(Math.random() * numArray.length)]);
+      console.log('number');
     }
     if (arrayUsed == 3) {
-      passResult.push(uppercaseArray[Math.floor(Math.random() * charArray.length)]);
+      passResult.push(charArray[Math.floor(Math.random() * charArray.length)]);
+      console.log('character');
     }
   }
   return passResult.join("");
